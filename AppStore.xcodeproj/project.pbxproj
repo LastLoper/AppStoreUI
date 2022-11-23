@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		513B0D04292E1D3200F70956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D03292E1D3200F70956 /* AppDelegate.swift */; };
 		513B0D06292E1D3200F70956 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D05292E1D3200F70956 /* SceneDelegate.swift */; };
-		513B0D08292E1D3200F70956 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D07292E1D3200F70956 /* ViewController.swift */; };
-		513B0D0B292E1D3200F70956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513B0D09292E1D3200F70956 /* Main.storyboard */; };
+		513B0D08292E1D3200F70956 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D07292E1D3200F70956 /* MainVC.swift */; };
 		513B0D0D292E1D3300F70956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513B0D0C292E1D3300F70956 /* Assets.xcassets */; };
 		513B0D10292E1D3300F70956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513B0D0E292E1D3300F70956 /* LaunchScreen.storyboard */; };
+		C0856E5B9323E8BD354AD51E /* Pods_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636AD7AC454EFD2533D7490B /* Pods_AppStore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		513B0D00292E1D3200F70956 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		513B0D03292E1D3200F70956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		513B0D05292E1D3200F70956 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		513B0D07292E1D3200F70956 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		513B0D0A292E1D3200F70956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		513B0D07292E1D3200F70956 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		513B0D0C292E1D3300F70956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		513B0D0F292E1D3300F70956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		513B0D11292E1D3300F70956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636AD7AC454EFD2533D7490B /* Pods_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC3710A46C527C74440BEB8 /* Pods-AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore.debug.xcconfig"; path = "Target Support Files/Pods-AppStore/Pods-AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		9C4F5FA17DCA5E7E96B05964 /* Pods-AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore.release.xcconfig"; path = "Target Support Files/Pods-AppStore/Pods-AppStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0856E5B9323E8BD354AD51E /* Pods_AppStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,8 @@
 			children = (
 				513B0D02292E1D3200F70956 /* AppStore */,
 				513B0D01292E1D3200F70956 /* Products */,
+				948A8C1B29C27AF7A84E573E /* Pods */,
+				74EF1F8C960AA594FB36B6FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +61,55 @@
 		513B0D02292E1D3200F70956 /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
+				513B0D19292E1F7200F70956 /* Model */,
+				513B0D18292E1F6600F70956 /* View */,
+				513B0D17292E1F5E00F70956 /* Controller */,
 				513B0D03292E1D3200F70956 /* AppDelegate.swift */,
 				513B0D05292E1D3200F70956 /* SceneDelegate.swift */,
-				513B0D07292E1D3200F70956 /* ViewController.swift */,
-				513B0D09292E1D3200F70956 /* Main.storyboard */,
 				513B0D0C292E1D3300F70956 /* Assets.xcassets */,
 				513B0D0E292E1D3300F70956 /* LaunchScreen.storyboard */,
 				513B0D11292E1D3300F70956 /* Info.plist */,
 			);
 			path = AppStore;
+			sourceTree = "<group>";
+		};
+		513B0D17292E1F5E00F70956 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				513B0D07292E1D3200F70956 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		513B0D18292E1F6600F70956 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		513B0D19292E1F7200F70956 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74EF1F8C960AA594FB36B6FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				636AD7AC454EFD2533D7490B /* Pods_AppStore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		948A8C1B29C27AF7A84E573E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AC3710A46C527C74440BEB8 /* Pods-AppStore.debug.xcconfig */,
+				9C4F5FA17DCA5E7E96B05964 /* Pods-AppStore.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 513B0D14292E1D3300F70956 /* Build configuration list for PBXNativeTarget "AppStore" */;
 			buildPhases = (
+				29C1414D96493304BC8A4147 /* [CP] Check Pods Manifest.lock */,
 				513B0CFC292E1D3200F70956 /* Sources */,
 				513B0CFD292E1D3200F70956 /* Frameworks */,
 				513B0CFE292E1D3200F70956 /* Resources */,
+				FC343D70E595F2C46312301E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +174,59 @@
 			files = (
 				513B0D10292E1D3300F70956 /* LaunchScreen.storyboard in Resources */,
 				513B0D0D292E1D3300F70956 /* Assets.xcassets in Resources */,
-				513B0D0B292E1D3200F70956 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29C1414D96493304BC8A4147 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC343D70E595F2C46312301E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStore/Pods-AppStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStore/Pods-AppStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStore/Pods-AppStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		513B0CFC292E1D3200F70956 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				513B0D08292E1D3200F70956 /* ViewController.swift in Sources */,
+				513B0D08292E1D3200F70956 /* MainVC.swift in Sources */,
 				513B0D04292E1D3200F70956 /* AppDelegate.swift in Sources */,
 				513B0D06292E1D3200F70956 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +235,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		513B0D09292E1D3200F70956 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				513B0D0A292E1D3200F70956 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		513B0D0E292E1D3300F70956 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +362,7 @@
 		};
 		513B0D15292E1D3300F70956 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC3710A46C527C74440BEB8 /* Pods-AppStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,9 +373,8 @@
 				INFOPLIST_FILE = AppStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,14 +382,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = walter.myios.app.AppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		513B0D16292E1D3300F70956 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C4F5FA17DCA5E7E96B05964 /* Pods-AppStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,9 +404,8 @@
 				INFOPLIST_FILE = AppStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +413,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = walter.myios.app.AppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
