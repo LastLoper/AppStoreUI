@@ -10,7 +10,7 @@ import UIKit
 class MainVC: UITabBarController {
     
     private lazy var todayVC: UIViewController = {
-        let vc = UIViewController()
+        let vc = TodayVC()
         let tabbarItem = UITabBarItem(
             title: "투데이",
             image: UIImage(systemName: "mail"),

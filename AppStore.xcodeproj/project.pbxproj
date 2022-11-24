@@ -12,6 +12,9 @@
 		513B0D08292E1D3200F70956 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D07292E1D3200F70956 /* MainVC.swift */; };
 		513B0D0D292E1D3300F70956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 513B0D0C292E1D3300F70956 /* Assets.xcassets */; };
 		513B0D10292E1D3300F70956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513B0D0E292E1D3300F70956 /* LaunchScreen.storyboard */; };
+		513B0D1B292F310E00F70956 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D1A292F310E00F70956 /* TodayVC.swift */; };
+		513B0D1D292F315900F70956 /* AppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D1C292F315900F70956 /* AppVC.swift */; };
+		513B0D1F292F34EF00F70956 /* TodayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513B0D1E292F34EF00F70956 /* TodayListCell.swift */; };
 		C0856E5B9323E8BD354AD51E /* Pods_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636AD7AC454EFD2533D7490B /* Pods_AppStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		513B0D0C292E1D3300F70956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		513B0D0F292E1D3300F70956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		513B0D11292E1D3300F70956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		513B0D1A292F310E00F70956 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		513B0D1C292F315900F70956 /* AppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVC.swift; sourceTree = "<group>"; };
+		513B0D1E292F34EF00F70956 /* TodayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayListCell.swift; sourceTree = "<group>"; };
 		636AD7AC454EFD2533D7490B /* Pods_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC3710A46C527C74440BEB8 /* Pods-AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore.debug.xcconfig"; path = "Target Support Files/Pods-AppStore/Pods-AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		9C4F5FA17DCA5E7E96B05964 /* Pods-AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore.release.xcconfig"; path = "Target Support Files/Pods-AppStore/Pods-AppStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				513B0D07292E1D3200F70956 /* MainVC.swift */,
+				513B0D1A292F310E00F70956 /* TodayVC.swift */,
+				513B0D1C292F315900F70956 /* AppVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -84,6 +92,7 @@
 		513B0D18292E1F6600F70956 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				513B0D1E292F34EF00F70956 /* TodayListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,8 +236,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				513B0D08292E1D3200F70956 /* MainVC.swift in Sources */,
+				513B0D1F292F34EF00F70956 /* TodayListCell.swift in Sources */,
 				513B0D04292E1D3200F70956 /* AppDelegate.swift in Sources */,
+				513B0D1B292F310E00F70956 /* TodayVC.swift in Sources */,
 				513B0D06292E1D3200F70956 /* SceneDelegate.swift in Sources */,
+				513B0D1D292F315900F70956 /* AppVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
