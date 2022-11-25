@@ -10,7 +10,11 @@ import SnapKit
 
 class TodayVC: UIViewController {
     
-    private var todayListData: [Today] = []
+    private var todayListData: [Today] = [] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -36,6 +40,8 @@ class TodayVC: UIViewController {
         collectionView.snp.makeConstraints { view in
             view.top.leading.trailing.bottom.equalToSuperview()
         }
+        
+        fetchData()
     }
 }
 
@@ -43,7 +49,7 @@ class TodayVC: UIViewController {
 extension TodayVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return todayListData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -103,6 +109,7 @@ extension TodayVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
+//plist parsing
 private extension TodayVC {
     func fetchData() {
         guard let url = Bundle.main.url(forResource: "Today", withExtension: "plist") else { return }

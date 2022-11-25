@@ -77,6 +77,16 @@ class DetailVC: UIViewController {
         titleLabel.text = today.title
         subTitleLabel.text = today.subTitle
     }
+    
+    @objc
+    private func didTapShareButton() {
+        let actityItems: [Any] = [today.title]
+        
+        //activityItems => 앱에서 공유할 컨텐츠
+        //applicationActivities => 공유될 목적지
+        let activityViewController = UIActivityViewController(activityItems: actityItems, applicationActivities: nil)
+        present(activityViewController, animated: true)
+    }
 }
 
 // MARK: Private
@@ -121,11 +131,5 @@ private extension DetailVC {
             $0.trailing.equalTo(titleLabel.snp.trailing)
             $0.width.equalTo(32.0)
         }
-    }
-    
-    @objc func didTapShareButton() {
-        let actityItems: [Any] = [today.title]
-        let activityViewController = UIActivityViewController(activityItems: actityItems, applicationActivities: nil)
-        present(activityViewController, animated: true)
     }
 }

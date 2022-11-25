@@ -9,6 +9,12 @@ import UIKit
 import SnapKit
 
 class FeatureSectionView: UIView {
+    private var featureList: [Feature] = [] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -46,6 +52,9 @@ class FeatureSectionView: UIView {
             $0.top.equalTo(collectionView.snp.bottom).offset(16.0)
             $0.bottom.equalToSuperview()
         }
+        
+        fetchData()
+//        collectionView.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -56,14 +65,14 @@ class FeatureSectionView: UIView {
 //MARK: - UICollectionViewDataSource
 extension FeatureSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return featureList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath) as! FeatureSectionCollectionCell
         
-        cell.setUpViews()
-        cell.prepare()
+        let item = featureList[indexPath.item]
+        cell.setUpViews(feature: item)
         
         return cell
     }
@@ -91,5 +100,20 @@ extension FeatureSectionView: UICollectionViewDelegateFlowLayout {
 extension FeatureSectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //셀 선택
+    }
+}
+
+//plist parsing
+private extension FeatureSectionView {
+    func fetchData() {
+        guard let url = Bundle.main.url(forResource: "Feature", withExtension: "plist") else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([Feature].self, from: data)
+            featureList = result
+        } catch let error {
+            print("error: \(error.localizedDescription)")
+        }
     }
 }

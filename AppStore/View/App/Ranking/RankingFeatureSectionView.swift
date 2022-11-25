@@ -9,7 +9,11 @@ import SnapKit
 import UIKit
 
 final class RankingFeatureSectionView: UIView {
-    private var rankingFeatureList: [RankingFeature] = []
+    private var rankingFeatureList: [RankingFeature] = [] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -59,7 +63,7 @@ final class RankingFeatureSectionView: UIView {
         super.init(frame: frame)
 
         setupViews()
-//        fetchData()
+        fetchData()
 //        collectionView.reloadData()
     }
 
@@ -86,10 +90,8 @@ extension RankingFeatureSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingFeatureCollectionViewCell", for: indexPath) as! RankingFeatureCollectionViewCell
         
-//        let rankingFeature = rankingFeatureList[indexPath.item]
-        
-//        cell.setup(rankingFeature: rankingFeature)
-        cell.setUpViews()
+        let rankingFeature = rankingFeatureList[indexPath.item]
+        cell.setUpViews(rankingFeature: rankingFeature)
 
         return cell
     }
@@ -127,13 +129,13 @@ private extension RankingFeatureSectionView {
         }
     }
 
-//    func fetchData() {
-//        guard let url = Bundle.main.url(forResource: "RankingFeature", withExtension: "plist") else { return }
-//
-//        do {
-//            let data = try Data(contentsOf: url)
-//            let result = try PropertyListDecoder().decode([RankingFeature].self, from: data)
-//            rankingFeatureList = result
-//        } catch {}
-//    }
+    func fetchData() {
+        guard let url = Bundle.main.url(forResource: "RankingFeature", withExtension: "plist") else { return }
+
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([RankingFeature].self, from: data)
+            rankingFeatureList = result
+        } catch {}
+    }
 }

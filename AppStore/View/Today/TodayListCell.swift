@@ -55,7 +55,10 @@ class TodayListCell: UICollectionViewCell {
         self.titleLable.text = today.title
         self.subTitleLable.text = today.subTitle
         self.descriptionLable.text = today.description
-        self.imageView.image = kf.setImage(with: today.imageURL)
+        
+        if let imgUrl = URL(string: today.imageURL) {
+            self.imageView.kf.setImage(with: imgUrl)
+        }
     }
 }
 
