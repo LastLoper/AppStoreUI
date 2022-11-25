@@ -21,7 +21,7 @@ class MainVC: UITabBarController {
     }()
     
     private lazy var appVC: UIViewController = {
-        let vc = UIViewController()
+        let vc = UINavigationController(rootViewController: AppVC())
         let tabbarItem = UITabBarItem(
             title: "앱",
             image: UIImage(systemName: "square.stack.3d.up"),
