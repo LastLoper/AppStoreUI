@@ -6,7 +6,7 @@
 - CollectionView로 앱스토어와 같이 가능한 다양하게 UI를 구현합니다.
 - UIActivityViewController를 이용해 앱에 대한 정보를 Email등으로 공유합니다.
 
-## 사용기술
+## 사용 기술
 - CollectionView를 이용한 앱 리스트.
 - 여러개의 CollectionView를 배치하기 위해 ScrollView를 사용.
 - AutoLayout을 만들기 위해 SnapKit 라이브러리 사용.
