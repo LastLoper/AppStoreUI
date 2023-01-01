@@ -1,9 +1,6 @@
 # 앱스토어 
 - StoryBoard없이 SnapKit 으로 만든 앱스토어 스타일의 UI를 가진 앱입니다.
 
-## 스크린샷
-<img src="" alt="키보드 등장 상태"/>
-
 ## 주요 기능 및 목표
 - TabBar를 이용해서 각 화면을 구성합니다.
 - CollectionView로 앱스토어와 같이 가능한 다양하게 UI를 구현합니다.
